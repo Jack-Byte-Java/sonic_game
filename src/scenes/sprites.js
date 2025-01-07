@@ -61,12 +61,7 @@ export function moveBackground(sonic) {
 
 export function movePlatform(gameSpeed, isGame) {
   let pitWidth = 0;
-  if (gameSpeed < 500) {
-    let freq = 3
-  }
-  else {
-    let freq = 5
-  }
+  let freq = gameSpeed < 500 ? 3 : 5;
 
   //Destroys the pit once the second platform reaches the left screen
   if (platforms[1].is("pit") && platforms[2].pos.x < 0) {
