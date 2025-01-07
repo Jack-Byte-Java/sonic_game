@@ -41,7 +41,6 @@ export function makeSonic(pos, mode) {
           }
         });
         k.onUpdate(() => {
-          // console.log(ringCount)
           if (ringCount == 0) {
             isSuper = false;
           }

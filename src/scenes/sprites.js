@@ -60,17 +60,12 @@ export function moveBackground(sonic) {
 }
 
 export function movePlatform(gameSpeed, isGame) {
-  //Todo: randomly add an endless pit before pushing the platform back
-  //Will need to adjust the x position based on how wide the pit is
-  //along with the posiiton of the second platform\
   let pitWidth = 0;
-  // console.log(platforms[1].is("pit"));
 
   //Destroys the pit once the second platform reaches the left screen
   if (platforms[1].is("pit") && platforms[2].pos.x < 0) {
     k.destroy(platforms[1]);
     platforms.splice(1, 1);
-    // console.log(platforms[1].pos())
   }
 
   if (platforms[1].pos.x < 0 && platforms[1].is("platform")) {
@@ -90,7 +85,6 @@ export function movePlatform(gameSpeed, isGame) {
   }
   platforms[0].move(-gameSpeed, 0);
   platforms[1].moveTo(platforms[0].pos.x + platformsWidth * 4, 450);
-  // console.log(platforms);
   if (platforms.length >= 3) {
     platforms[2].moveTo(platforms[0].pos.x + 500 + platformsWidth * 4, 450);
   }

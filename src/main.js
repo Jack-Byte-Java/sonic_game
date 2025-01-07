@@ -20,7 +20,6 @@ k.loadSprite("sonic", "graphics/sonic.png", {
   },
 });
 
-//Todo: add super sonic sprite (transform, run, jump, untransform)
 
 k.loadSprite("ring", "graphics/ring.png", {
   sliceX: 16,
@@ -47,7 +46,6 @@ k.loadSound("ring", "sounds/Ring.wav");
 k.loadSound("chemical-plant", "sounds/chemicalPlant.mp3");
 k.loadSound("game-over", "sounds/gameOver.mp3");
 k.loadSound("super-sonic", "sounds/superSonic.mp3");
-//Todo: add super sonic music from sonic 2
 
 // main menu screen
 k.scene("main-menu", mainMenu);

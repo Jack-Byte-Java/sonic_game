@@ -153,33 +153,6 @@ export default function game() {
     );
   };
 
-  // const spawnMotobug = () => {
-  //   const motobug = new makeCollectable(
-  //     "motobug",
-  //     "run",
-  //     k.vec2(1950, 773),
-  //     "enemy",
-  //     k.vec2(-5, 0),
-  //     32,
-  //     32
-  //   );
-  //   motobug.onUpdate(() => {
-  //     if (gameSpeed < 3000) {
-  //       motobug.move(-(gameSpeed + 300), 0);
-  //       return;
-  //     }
-  //     motobug.move(-gameSpeed, 0);
-  //   });
-
-  //   motobug.onExitScreen(() => {
-  //     if (motobug.pos.x < 0) {
-  //       k.destroy(motobug);
-  //     }
-  //   });
-
-  //   const waitTime = k.rand(0.5, 2.5);
-  //   k.wait(waitTime, spawnMotobug);
-  // };
 
   spawnCollectable(
     "motobug",
@@ -193,45 +166,6 @@ export default function game() {
     32
   );
 
-  // spawnCollectable(
-  //   "lava",
-  //   null,
-  //   k.vec2(1920, 700),
-  //   "lava",
-  //   10,
-  //   20,
-  //   k.vec2(-10, 0),
-  //   20,
-  //   40
-  // );
-
-  // const spawnRing = () => {
-  //   const ring = new makeCollectable(
-  //     "ring",
-  //     "spin",
-  //     k.vec2(1950, 745),
-  //     "ring",
-  //     null,
-  //     null,
-  //     null
-  //   );
-  //   ring.onUpdate(() => {
-  //     if (gameSpeed < 3000) {
-  //       ring.move(-(gameSpeed + 300), 0);
-  //       return;
-  //     }
-  //     ring.move(-gameSpeed, 0);
-  //   });
-
-  //   ring.onExitScreen(() => {
-  //     if (ring.pos.x < 0) {
-  //       k.destroy(ring);
-  //     }
-  //   });
-
-  //   const waitTime = k.rand(0.5, 2.5);
-  //   k.wait(waitTime, spawnRing);
-  // };
 
   spawnCollectable(
     "ring",
