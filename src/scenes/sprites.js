@@ -61,6 +61,12 @@ export function moveBackground(sonic) {
 
 export function movePlatform(gameSpeed, isGame) {
   let pitWidth = 0;
+  if (gameSpeed < 500) {
+    let freq = 3
+  }
+  else {
+    let freq = 5
+  }
 
   //Destroys the pit once the second platform reaches the left screen
   if (platforms[1].is("pit") && platforms[2].pos.x < 0) {
@@ -70,7 +76,7 @@ export function movePlatform(gameSpeed, isGame) {
 
   if (platforms[1].pos.x < 0 && platforms[1].is("platform")) {
     let rand = k.rand(0, 10);
-    if (rand >= 0 && isGame) {
+    if (rand >= freq && isGame) {
       console.log("created a pit");
       platforms.push(
         k.add([k.pos([platforms[1].pos.x + platformsWidth * 4]), "pit"])
