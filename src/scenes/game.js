@@ -238,9 +238,10 @@ export default function game() {
     let platforms = movePlatform(gameSpeed, true);
     for (let i = 0; i < platforms.length; i++) {
       if (platforms[i].is("pit") && !curPit && platforms[i].pos.x > 0) {
+        
         curPit = k.add([
-          k.pos(k.vec2(platforms[i].pos.x + 270, platforms[i].pos.y + 380)),
-          k.rect(350, 50),
+          k.pos(k.vec2(platforms[i].pos.x + 270, platforms[i].pos.y + 390)),
+          k.rect(325, 25),
           "pit",
           k.area(),
           k.opacity(0),
